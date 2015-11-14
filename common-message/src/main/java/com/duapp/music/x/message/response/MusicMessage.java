@@ -1,0 +1,25 @@
+package com.duapp.music.x.message.response;
+
+import com.duapp.music.x.message.base.BaseResMessage;
+import com.duapp.music.x.message.response.model.Music;
+
+/**
+ * ªÿ∏¥“Ù¿÷œ˚œ¢
+ * 
+ * @author qiuqiu3212
+ */
+public class MusicMessage extends BaseResMessage {
+
+	/**
+	 * “Ù¿÷
+	 */
+	private Music Music;
+
+	public Music getMusic() {
+		return Music;
+	}
+
+	public void setMusic(Music music) {
+		Music = music;
+	}
+}
