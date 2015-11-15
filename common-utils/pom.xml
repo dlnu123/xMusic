@@ -8,6 +8,13 @@
 	<description>微信公众号工具类</description>
 
 	<dependencies>
+		<!-- 项目自带jar包 -->
+		<dependency>
+			<groupId>com.duapp.wechat.message</groupId>
+			<artifactId>common-message</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- 第三方jar包 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -29,6 +36,11 @@
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.3.1</version>
 		</dependency>
 	</dependencies>
 </project>
