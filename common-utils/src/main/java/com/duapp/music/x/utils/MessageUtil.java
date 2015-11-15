@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.utils;
 
 import java.io.IOException;
@@ -63,6 +64,7 @@ public class MessageUtil {
 	 * 请求数据解析
 	 * 
 	 * @param req
+	 *            请求数据
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")

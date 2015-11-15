@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.utils;
 
 import java.util.Arrays;
@@ -16,9 +17,12 @@ public class SignUtil {
 	 * 验证签名
 	 * 
 	 * @param signature
+	 *            微信加密签名
 	 * @param timestamp
+	 *            时间戳
 	 * @param nonce
-	 * @return
+	 *            随机数
+	 * @return 验证签名是否成功
 	 */
 	public static Boolean sign(String signature, String timestamp, String nonce) {
 

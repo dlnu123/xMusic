@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.message.response;
 
 import com.duapp.music.x.message.base.BaseResMessage;
@@ -15,10 +16,12 @@ public class TextMessage extends BaseResMessage {
 	private String Content;
 
 	public String getContent() {
+
 		return Content;
 	}
 
 	public void setContent(String content) {
+
 		Content = content;
 	}
 }

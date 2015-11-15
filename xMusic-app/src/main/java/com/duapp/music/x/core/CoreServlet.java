@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.core;
 
 import java.io.IOException;
@@ -26,7 +27,9 @@ public class CoreServlet extends HttpServlet {
 	 * 接入微信公众平台开发,成为开发者
 	 * 
 	 * @param req
+	 *            请求
 	 * @param resp
+	 *            响应
 	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -56,6 +59,7 @@ public class CoreServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}

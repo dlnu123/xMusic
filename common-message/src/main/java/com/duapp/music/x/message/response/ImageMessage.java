@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.message.response;
 
 import com.duapp.music.x.message.base.BaseResMessage;
@@ -16,10 +17,12 @@ public class ImageMessage extends BaseResMessage {
 	private Image Image;
 
 	public Image getImage() {
+
 		return Image;
 	}
 
 	public void setImage(Image image) {
+
 		Image = image;
 	}
 }

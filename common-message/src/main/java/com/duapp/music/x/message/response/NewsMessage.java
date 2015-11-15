@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.message.response;
 
 import java.util.List;
@@ -23,18 +24,22 @@ public class NewsMessage extends BaseResMessage {
 	private List<Article> Articles;
 
 	public Integer getArticleCount() {
+
 		return ArticleCount;
 	}
 
 	public void setArticleCount(Integer articleCount) {
+
 		ArticleCount = articleCount;
 	}
 
 	public List<Article> getArticles() {
+
 		return Articles;
 	}
 
 	public void setArticles(List<Article> articles) {
+
 		Articles = articles;
 	}
 }

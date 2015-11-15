@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.message.response;
 
 import com.duapp.music.x.message.base.BaseResMessage;
@@ -16,10 +17,12 @@ public class VideoMessage extends BaseResMessage {
 	private Video Video;
 
 	public Video getVideo() {
+
 		return Video;
 	}
 
 	public void setVideo(Video video) {
+
 		Video = video;
 	}
 }

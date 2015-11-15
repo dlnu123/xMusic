@@ -1,3 +1,4 @@
+
 package com.duapp.music.x.utils;
 
 import java.io.UnsupportedEncodingException;
@@ -17,7 +18,9 @@ public class EncryptUtil {
 	 * 加密算法
 	 * 
 	 * @param algorithm
+	 *            加密算法
 	 * @param orgi
+	 *            需要加密的字符串
 	 * @return 加密之后的字符串
 	 */
 	public static String digest(String algorithm, String orgi) {
