@@ -16,3 +16,4 @@ hs_err_pid*
 # filter eclipse dir
 .metadata/
 .settings/
+.recommenders/
