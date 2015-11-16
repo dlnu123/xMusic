@@ -74,6 +74,9 @@ public class MessageUtil {
 	// 响应图文消息
 	private static final String RES_MESSAGE_NEWS = "news";
 
+	// 将解析结果放在Map中
+	private static Map<String, String> result = new HashMap<String, String>();
+
 	/**
 	 * 请求数据解析
 	 * 
@@ -84,8 +87,6 @@ public class MessageUtil {
 	@SuppressWarnings("unchecked")
 	public static Map<String, String> parseXML(HttpServletRequest req) {
 
-		// 将解析结果放在Map中
-		Map<String, String> result = new HashMap<String, String>();
 		SAXReader reader = new SAXReader();
 		InputStream input = null;
 
@@ -94,11 +95,8 @@ public class MessageUtil {
 			input = req.getInputStream();
 			Document doc = reader.read(input);
 			Element root = doc.getRootElement();
-			List<Element> elements = root.elements();
-			for (Element e : elements) {
-				// 下面三种方法的结果是一致的。唯一的区别就是getTextTrim、getText对于两边空格的处理
-				// e.getStringValue()、e.getTextTrim()、e.getText()
-				result.put(e.getName(), e.getText());
+			if (root.elements().size() != 0) {
+				_recursion(root.elements());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -116,6 +114,25 @@ public class MessageUtil {
 		}
 
 		return result;
+	}
+
+	/**
+	 * 递归读取xml的数据
+	 * 
+	 * @param elements
+	 */
+	@SuppressWarnings("unchecked")
+	private static void _recursion(List<Element> elements) {
+
+		for (Element e : elements) {
+			if (e.elements().size() != 0) {
+				_recursion(e.elements());
+			} else {
+				// 下面三种方法的结果是一致的。唯一的区别就是getTextTrim、getText对于两边空格的处理
+				// e.getStringValue()、e.getTextTrim()、e.getText()
+				result.put(e.getName(), e.getText());
+			}
+		}
 	}
 
 	/**
