@@ -2,6 +2,7 @@
 package com.duapp.music.x.core;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Writer;
 
 import javax.servlet.ServletException;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.duapp.music.x.service.core.CoreService;
+import com.duapp.music.x.service.core.impl.CoreServiceImpl;
 import com.duapp.music.x.utils.SignUtil;
 
 /**
@@ -60,8 +63,19 @@ public class CoreServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		// TODO Auto-generated method stub
-		super.doPost(req, resp);
+		// 将request、response的编码转换成UTF-8，避免造成中文乱码
+		req.setCharacterEncoding("UTF-8");
+		resp.setCharacterEncoding("UFT-8");
+
+		// 处理请求，获取返回的xml信息
+		CoreService coreService = new CoreServiceImpl();
+		String responseMsg = coreService.handleRequest(req);
+
+		// 将生成的xml返回值写入响应的输出流中
+		PrintWriter writer = resp.getWriter();
+		writer.write(responseMsg);
+		writer.flush();
+		writer.close();
 	}
 
 }

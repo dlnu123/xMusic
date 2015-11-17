@@ -35,45 +35,6 @@ import com.thoughtworks.xstream.io.xml.XppDriver;
  */
 public class MessageUtil {
 
-	// 请求文本消息
-	private static final String REQ_MESSAGE_TEXT = "text";
-
-	// 请求图片消息
-	private static final String REQ_MESSAGE_IMAGE = "image";
-
-	// 请求语音消息
-	private static final String REQ_MESSAGE_VOICE = "voice";
-
-	// 请求视频消息
-	private static final String REQ_MESSAGE_VIDEO = "video";
-
-	// 请求小视频消息
-	private static final String REQ_MESSAGE_SHORTVIDEO = "shortvideo";
-
-	// 请求地理位置消息
-	private static final String REQ_MESSAGE_LOCATION = "location";
-
-	// 请求链接消息
-	private static final String REQ_MESSAGE_LINK = "link";
-
-	// 响应文本消息
-	private static final String RES_MESSAGE_TEXT = "text";
-
-	// 响应图片消息
-	private static final String RES_MESSAGE_IMAGE = "image";
-
-	// 响应语音消息
-	private static final String RES_MESSAGE_VOICE = "voice";
-
-	// 响应视频消息
-	private static final String RES_MESSAGE_VIDEO = "video";
-
-	// 响应音乐消息
-	private static final String RES_MESSAGE_MUSIC = "music";
-
-	// 响应图文消息
-	private static final String RES_MESSAGE_NEWS = "news";
-
 	// 将解析结果放在Map中
 	private static Map<String, String> result = new HashMap<String, String>();
 
@@ -117,7 +78,7 @@ public class MessageUtil {
 	}
 
 	/**
-	 * 递归读取xml的数据
+	 * 递归读取xml的数据(由于请求中的xml中不存在相同的标签，因此采取下面的递归可以实现，否则会造成值得覆盖)
 	 * 
 	 * @param elements
 	 */

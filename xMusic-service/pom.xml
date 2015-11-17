@@ -1,18 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.duapp.music.x.app</groupId>
-	<artifactId>xMusic-app</artifactId>
+	<groupId>com.duapp.music.x.service</groupId>
+	<artifactId>xMusic-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>wechat-xMusic-app</name>
-	<description>微信：音悦无极限公众号</description>
+	<name>wechat-xMusic-service</name>
+	<description>音悦无极限的service层</description>
 
 	<dependencies>
 		<!-- 项目自带jar包 -->
 		<dependency>
-			<groupId>com.duapp.music.x.service</groupId>
-			<artifactId>xMusic-service</artifactId>
+			<groupId>com.duapp.wechat.utils</groupId>
+			<artifactId>common-utils</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
